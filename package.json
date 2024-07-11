@@ -1,0 +1,16 @@
+{
+  "name": "meu-portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Pablo Rafael",
+    "email": "pabloofael@gmail.com",
+    "url": "https://github.com/PabloRafael-coder"
+  },
+  "license": "ISC",
+  "description": ""
+}
