@@ -1,0 +1,32 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: var(--gray-600);
+    height: 4rem;
+}
+
+.header h2 {
+    color: var(--gray-300);
+}
+
+.headerlist {
+    display: flex;
+    gap: 1.4rem;
+}
+
+.headerlist a {
+    text-decoration: none;
+    color: var(--gray-300);
+}
+
+.headerLink {
+    border: 2px solid var(--green-500);
+    border-radius: 5px;
+    padding: 0.5rem;
+    background: var(--green-500);
+    color: var(--gray-300);
+    text-decoration: none;
+
+}
