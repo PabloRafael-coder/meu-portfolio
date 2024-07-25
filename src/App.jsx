@@ -9,7 +9,7 @@ function App() {
       <main>
         <section className={styles.section}>
           <div className={styles.content}>
-            <p className={styles.descriptionText}>Full-Stack</p>
+            <p className={styles.descriptionSkill}>Full-Stack</p>
             <h1 className={styles.title}>
               Sou desenvolvedor web e transformo ideias em soluções web.
             </h1>
