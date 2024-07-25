@@ -4,9 +4,9 @@ export function Header() {
     return (
         <header className={styles.header}>
             <h2>
-                PabloRafael-coder
+                Pablo
                 <span>
-                    .
+                    Rafael-coder
                 </span>
             </h2>
             <nav>
