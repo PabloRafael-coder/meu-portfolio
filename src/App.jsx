@@ -7,19 +7,22 @@ function App() {
     <>
       <Header />
       <main>
-        <section className={styles.sectionContent}>
-          <div className={styles.textContent}>
-            <h1>Olá, sou Pablo Rafael</h1>
-            <p>
+        <section className={styles.section}>
+          <div className={styles.content}>
+            <p className={styles.descriptionText}>Full-Stack</p>
+            <h1 className={styles.title}>
+              Sou desenvolvedor web e transformo ideias em soluções web.
+            </h1>
+            <p className={styles.text}>
               Com uma sólida formação em JavaScript e especialização em React,
               trago uma abordagem abrangente e inovadora ao desenvolvimento web,
-              atuando com maestria tanto no front-end quanto no back-end. Minha
-              habilidade em criar interfaces dinâmicas e intuitivas se alia à
-              competência em gerenciar servidores e bancos de dados, garantindo
-              uma experiência completa e otimizada para o usuário.
+              atuando com maestria tanto no front-end quanto no back-end.
             </p>
+            <div className={styles.buttons}>
+              <button className={styles.buttonLeft}>Contrate-me</button>
+              <button className={styles.buttonRight}>Projetos</button>
+            </div>
           </div>
-
         </section>
       </main>
     </>
