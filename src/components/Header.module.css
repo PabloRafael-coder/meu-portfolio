@@ -2,12 +2,15 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    background: var(--gray-600);
     height: 4rem;
 }
 
 .header h2 {
+    color: var(--gray-600);
+}
+
+.header span {
+    font-weight: 300;
     color: var(--gray-300);
 }
 
@@ -18,15 +21,14 @@
 
 .headerlist a {
     text-decoration: none;
-    color: var(--gray-300);
+    color: var(--gray-600);
 }
 
 .headerLink {
-    border: 2px solid var(--green-500);
     border-radius: 5px;
-    padding: 0.5rem;
-    background: var(--green-500);
-    color: var(--gray-300);
+    background: var(--black);
+    padding: 0.6rem;
+    color: var(--white);
     text-decoration: none;
 
 }
