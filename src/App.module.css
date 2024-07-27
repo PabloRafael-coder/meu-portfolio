@@ -1,7 +1,10 @@
-.section{
+
+.sectionProfile {
+    display: flex;
     max-width: 75.5rem;
     padding-top: 8rem;
     margin: 0 auto;
+    gap: 2rem;
 }
 
 .content {
@@ -26,7 +29,7 @@
 }
 
 .text {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     max-width: 53rem;
     line-height: 1.75rem;
 }
@@ -47,10 +50,44 @@
     cursor: pointer;
 }
 
+.buttonRightStyle {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
 .buttonRight {
     background: none;
     border: none;
     font-size: 1rem;
     cursor: pointer;
     font-weight: 700;
+}
+
+.avatar {
+    width: 200px;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 6px 5px 20px #00000080;
+}
+
+.sectionSkill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 3rem;
+    background: var(--gray-300);
+}
+
+.sectionSkill p {
+    max-width: 60rem;
+    text-align: center;
+}
+
+.contentCardSkill {
+    display: flex;
+    padding: 0 0 3rem 0;
+    gap: 1rem;
 }
