@@ -1,6 +1,10 @@
 .content {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
     width: 400px;
-    border: 1px solid #000;
+    border: 1px solid var(--gray-300);
     border-radius: 15px;
 }
