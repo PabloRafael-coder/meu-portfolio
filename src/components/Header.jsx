@@ -12,8 +12,8 @@ export function Header() {
             <nav>
                 <li className={styles.headerlist}>
                     <a href='#'>Home</a>
-                    <a href='#'>Sobre</a>
                     <a href='#'>Projetos</a>
+                    <a href='https://github.com/PabloRafael-coder'>GitHub</a>
                     <a href='https://www.linkedin.com/in/pablo-rafael-1372a2279/'>Linkedin</a>
                 </li>
             </nav>
