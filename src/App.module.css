@@ -107,3 +107,34 @@
     flex-direction: column;
     align-items: center;
 }
+
+.cardToolsContent {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cardToolsSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 75.5rem;
+    padding: 4rem 0;
+    gap: 2rem;
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+    width: 100%;
+    color: var(--white);
+    background: var(--gray-600);
+}
+
+.footerContent a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
