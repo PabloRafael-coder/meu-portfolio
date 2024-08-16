@@ -1,0 +1,18 @@
+.CardToolsContent {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: 0.3rem 1rem;
+    gap: 1rem;
+    background: var(--gray-300);
+    border-radius: 8px;
+}
+
+.CardToolsContent img {
+    width: 1.5rem;
+}
+
+.CardToolsContent p {
+    font-weight: 700;
+    color: var(--gray-700);
+}
