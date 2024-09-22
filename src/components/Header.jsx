@@ -1,23 +1,19 @@
 import styles from './Header.module.css'
+import logo from '../assets/thunder.png'
 
 export function Header() {
     return (
         <header className={styles.header}>
-            <h2>
-                Pablo
-                <span>
-                    Rafael-coder
-                </span>
-            </h2>
-            <nav>
-                <li className={styles.headerlist}>
-                    <a href='#'>Home</a>
-                    <a href='#'>Projetos</a>
-                    <a href='https://github.com/PabloRafael-coder'>GitHub</a>
-                    <a href='https://www.linkedin.com/in/pablo-rafael-1372a2279/'>Linkedin</a>
+            <img className={styles.logoHeader} src={logo} alt="" />
+            <nav className={styles.headerNav}>
+                <li className={styles.headerNavList}>
+                    <a href='#' className={styles.desktopOnly}>Home</a>
+                    <a href='#' className={styles.desktopOnly}>Projetos</a>
+                    <a href='https://github.com/PabloRafael-coder' className={styles.desktopOnly}>GitHub</a>
+                    <a href='https://www.linkedin.com/in/pablo-rafael-1372a2279/' className={styles.desktopOnly}>Linkedin</a>
+                    <button href='#' className={styles.headerButton}>Entre em contato</button>
                 </li>
             </nav>
-            <a className={styles.headerLink} href='#'>Entre em contato</a>
         </header >
     )
 }
