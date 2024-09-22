@@ -31,9 +31,9 @@ function App() {
         <section className={styles.sectionProfile}>
           <div>
             <img className={styles.avatar} src={minhaImagem} />
+            <p className={styles.descriptionSkill}>Developer Web</p>
           </div>
           <div className={styles.content}>
-            <p className={styles.descriptionSkill}>Full-Stack</p>
             <h1 className={styles.title}>
               Sou desenvolvedor web e transformo ideias em soluções web.
             </h1>
