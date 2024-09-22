@@ -7,9 +7,16 @@
 
 .sectionProfile {
     display: flex;
-    max-width: 75.5rem;
-    padding: 4rem 0;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 4rem;
+
+
+    padding-block: 4rem;
+    margin-inline: auto;
+
+    --max-width: 375px;
+    width: min(var(--max-width), 100% - 1.5rem * 2);
+
 }
 
 .content {
@@ -19,30 +26,30 @@
 }
 
 .descriptionSkill {
-    width: max-content;
-    padding: 0 1rem;
+    text-align: center;
     font-size: 1.5rem;
     font-weight: 700;
+
     border-radius: 8px;
-    background: #1976d2;
+
+    background: #000000;
     color: var(--gray-100);
 }
 
 .title {
-    max-width: 55rem;
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 1; 
 }
 
 .text {
-    font-size: 1.15rem;
-    max-width: 53rem;
+    font-size: 1rem;
     line-height: 1.75rem;
 }
 
 .buttons {
     display: flex;
-    gap: 1.25rem;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .buttonLeft {
@@ -75,6 +82,30 @@
     min-width: 100%;
     border-radius: 10px;
     box-shadow: 6px 5px 20px #00000080;
+}
+
+@media (width >= 50rem) {
+
+    .sectionProfile {
+        flex-direction: row;
+        --max-width: 80rem
+    }
+
+    .content {
+        max-width: 40rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .text {
+        font-size: 1.5rem;
+    }
+
+    .buttons {
+        justify-content: start;
+    }
 }
 
 
