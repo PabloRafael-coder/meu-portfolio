@@ -13,7 +13,6 @@ import git from './assets/Git.svg';
 import github from './assets/Github-Dark.svg';
 
 
-
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
 import Diversity3OutlinedIcon from '@mui/icons-material/Diversity3Outlined';
@@ -91,8 +90,9 @@ function App() {
           </div>
         </section>
         <section className={styles.cardToolsSection}>
-          <h2>Minhas habilidades</h2>
           <div className={styles.cardToolsContent}>
+            <h2>Minhas habilidades</h2>
+
             <h3>Minhas ferramentas:</h3>
             <CardTools image={git} text="Git" />
             <CardTools image={github} text="GitHub" />
@@ -106,7 +106,6 @@ function App() {
         <footer className={styles.footerContent}>
           <h2>Vamos conversar?</h2>
           <a href="">pabloofael@gmail.com</a>
-          <p>Copyright 2024 - Pablo Rafael</p>
         </footer>
       </main>
     </>
