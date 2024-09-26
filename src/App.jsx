@@ -91,9 +91,7 @@ function App() {
         </section>
         <section className={styles.cardToolsSection}>
           <div className={styles.cardToolsContent}>
-            <h2>Minhas habilidades</h2>
-
-            <h3>Minhas ferramentas:</h3>
+            <h2>Minhas ferramentas:</h2>
             <CardTools image={git} text="Git" />
             <CardTools image={github} text="GitHub" />
             <CardTools image={javascript} text="JavaScript" />
