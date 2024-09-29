@@ -1,28 +1,4 @@
-.mainContent{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
-.sectionProfile {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-
-    padding-block: 4rem;
-    margin-inline: auto;
-
-    --max-width: 375px;
-    width: min(var(--max-width), 100% - 1.5rem * 2);
-
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
 
 .descriptionSkill {
     text-align: center;
@@ -64,20 +40,6 @@
     cursor: pointer;
 }
 
-.buttonRightStyle {
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
-}
-
-.buttonRight {
-    background: none;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: 700;
-}
-
 .avatar {
     width: 200px;
     min-width: 100%;
@@ -87,10 +49,7 @@
 
 @media (width >= 45rem) {
 
-    .sectionProfile {
-        flex-direction: row;
-        --max-width: 80rem
-    }
+ 
 
     .content {
         max-width: 40rem;
@@ -123,11 +82,6 @@
     text-align: start;
 }
 
-.contentCard {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
 
 .textSection{
     text-align: center;
@@ -139,23 +93,6 @@
     align-items: center;
 }
 
-
-@media (width >= 45rem) {
-    .cardSection {
-        width: min(80rem, 100% - 1.5rem * 2);
-    }
-
-    .contentCard {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-    }
-
-    .cardSection h2, p {
-        text-align: center;
-    }
-    
-}
 
 .cardToolsContent {
     display: flex;
