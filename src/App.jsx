@@ -3,6 +3,11 @@ import { Header } from "./components/Header"
 import { CardSkill } from './components/CardSkills';
 import { CardTools } from './components/CardTools';
 
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
+import Diversity3OutlinedIcon from '@mui/icons-material/Diversity3Outlined';
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+
 import minhaImagem from './assets/minha-imagem.png';
 import javascript from './assets/JavaScript.svg';
 import react from './assets/React-Dark.svg';
@@ -12,27 +17,28 @@ import postgres from './assets/PostgreSQL-Dark.svg';
 import git from './assets/Git.svg';
 import github from './assets/Github-Dark.svg';
 
-
-import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
-import Diversity3OutlinedIcon from '@mui/icons-material/Diversity3Outlined';
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-
 import styles from './App.module.css'
 import './global.css'
+import 
+{ ButtonsContainer, CardContainer, 
+  CardContent, 
+  ContentContainer, HireButton, 
+  HomeContainer, ProfileContainer, 
+  ProjectButton, ProjectButtonContainer } 
+from "./app";
 
 
 function App() {
   return (
     <>
       <Header />
-      <main className={styles.mainContent}>
-        <section className={styles.sectionProfile}>
+      <HomeContainer >
+        <ProfileContainer className={styles.sectionProfile}>
           <div>
             <img className={styles.avatar} src={minhaImagem} />
             <p className={styles.descriptionSkill}>Developer Web</p>
           </div>
-          <div className={styles.content}>
+          <ContentContainer >
             <h1 className={styles.title}>
               Sou desenvolvedor web e transformo ideias em soluções web.
             </h1>
@@ -41,21 +47,25 @@ function App() {
               abordagem criativa e dedicada ao desenvolvimento web, contribuindo
               para projetos tanto no front-end quanto no back-end.
             </p>
-            <div className={styles.buttons}>
-              <button className={styles.buttonLeft}>Contrate-me</button>
-              <div className={styles.buttonRightStyle}>
-                <button className={styles.buttonRight}>Projetos </button>
+            <ButtonsContainer>
+              <HireButton>
+                Contrate-me
+              </HireButton>
+              <ProjectButtonContainer>
+                <ProjectButton>
+                  Projetos
+                </ProjectButton>
                 <ArrowOutwardIcon />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className={styles.cardSection}>
+              </ProjectButtonContainer>
+            </ButtonsContainer>
+          </ContentContainer>
+        </ProfileContainer>
+        <CardContainer>
           <h2>Minhas Competências</h2>
           <p className={styles.textSection}>Busco novas experiências e estou pronto para ajudar a criar projetos
             incríveis. Posso criar layouts impressionantes para suas páginas.
           </p>
-          <div className={styles.contentCard}>
+          <CardContent>
             <CardSkill>
               <div className={styles.cardTitle}>
                 <ManageAccountsOutlinedIcon color={'primary'} fontSize={'large'} />
@@ -87,8 +97,8 @@ function App() {
                 sempre buscando criar um ambiente positivo e produtivo.
               </p>
             </CardSkill>
-          </div>
-        </section>
+          </CardContent>
+        </CardContainer>
         <section className={styles.cardToolsSection}>
           <div className={styles.cardToolsContent}>
             <h2>Minhas ferramentas:</h2>
@@ -105,7 +115,7 @@ function App() {
           <h2>Vamos conversar?</h2>
           <a href="">pabloofael@gmail.com</a>
         </footer>
-      </main>
+      </HomeContainer>
     </>
   )
 }
