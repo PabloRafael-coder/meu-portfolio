@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom'
+
 import styles from './Header.module.css'
 import logo from '../assets/thunder.png'
 
@@ -7,13 +9,23 @@ export function Header() {
             <img className={styles.logoHeader} src={logo} alt="" />
             <nav className={styles.headerNav}>
                 <li className={styles.headerNavList}>
-                    <a href='#' className={styles.desktopOnly}>Home</a>
-                    <a href='#' className={styles.desktopOnly}>Projetos</a>
-                    <a href='https://github.com/PabloRafael-coder' className={styles.desktopOnly}>GitHub</a>
-                    <a href='https://www.linkedin.com/in/pablo-rafael-1372a2279/' className={styles.desktopOnly}>Linkedin</a>
+                    <NavLink to='/' 
+                        className={({isActive}) => 
+                        isActive 
+                        ? `${styles.desktopOnly} ${styles.active}` 
+                        : `${styles.desktopOnly}`}>Home
+                    </NavLink>
+                    <NavLink to='/project' 
+                        className={({isActive}) => 
+                        isActive 
+                        ? `${styles.desktopOnly} ${styles.active}` 
+                        : `${styles.desktopOnly}`}>Projetos
+                    </NavLink>
+                    <NavLink to='https://github.com/PabloRafael-coder' className={styles.desktopOnly}>GitHub</NavLink>
+                    <NavLink to='https://www.linkedin.com/in/pablo-rafael-1372a2279/' className={styles.desktopOnly}>Linkedin</NavLink>
                     <button href='#' className={styles.headerButton}>Entre em contato</button>
                 </li>
             </nav>
         </header >
     )
-}
+} 
