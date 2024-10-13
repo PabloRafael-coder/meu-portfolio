@@ -15,106 +15,107 @@ import postgres from '../../assets/PostgreSQL-Dark.svg';
 import git from '../../assets/Git.svg';
 import github from '../../assets/Github-Dark.svg';
 
-import '../../global.css'
+import '../../global.css';
 
-import 
-{ ButtonsContainer, CardContainer, 
-  CardContent, 
-  ContentContainer, FooterContainer, HireButton, 
-  HomeContainer, ProfileContainer, 
-  ProjectButton, ProjectButtonContainer, 
+import {
+  ButtonsContainer,
+  CardContainer,
+  CardContent,
+  ContentContainer,
+  FooterContainer,
+  HireButton,
+  HomeContainer,
+  ProfileContainer,
+  ProjectButton,
+  ProjectButtonContainer,
   SkillsContainer,
   ToolCardContents,
-  UserProfile} 
-from "./styles";
-
+  UserProfile,
+} from './styles';
 
 export function Home() {
   return (
-      <HomeContainer >
-        <ProfileContainer>
-          <UserProfile>
-            <img src={minhaImagem} />
-            <p>Software Developer</p>
-          </UserProfile>
-          <ContentContainer >
-            <h1>
-              Sou desenvolvedor web e transformo ideias em soluções web.
-            </h1>
-            <p>
-              Com uma base sólida em JavaScript e experiência em React, trago uma
-              abordagem criativa e dedicada ao desenvolvimento web, contribuindo
-              para projetos tanto no front-end quanto no back-end.
-            </p>
-            <ButtonsContainer>
-              <HireButton>
-                Download-CV
-              </HireButton>
-              <ProjectButtonContainer>
-                <ProjectButton>
-                  Projetos
-                </ProjectButton>
-                <ArrowOutwardIcon />
-              </ProjectButtonContainer>
-            </ButtonsContainer>
-          </ContentContainer>
-        </ProfileContainer>
-        <CardContainer>
-          <h2>Minhas Competências</h2>
-          <p>Busco novas experiências e estou pronto para ajudar a criar projetos
-            incríveis. Posso criar layouts impressionantes para suas páginas.
+    <HomeContainer>
+      <ProfileContainer>
+        <UserProfile>
+          <img src={minhaImagem} />
+          <p>Software Developer</p>
+        </UserProfile>
+        <ContentContainer>
+          <h1>Sou desenvolvedor web e transformo ideias em soluções web.</h1>
+          <p>
+            Com uma base sólida em JavaScript e experiência em React, trago uma
+            abordagem criativa e dedicada ao desenvolvimento web, contribuindo
+            para projetos tanto no front-end quanto no back-end.
           </p>
-          <CardContent>
-            <CardSkill>
-              <div>
-                <ManageAccountsOutlinedIcon color={'primary'} fontSize={'large'} />
-                <h3>Interface do usuário</h3>
-              </div>
-              <p>
-                Como desenvolvedor busco criar interfaces de usuário intuitivas
-                e visualmente atraentes, sempre priorizando a experiência do
-                usuário e a usabilidade.
-              </p>
-            </CardSkill>
-            <CardSkill>
-              <div>
-                <SettingsOutlinedIcon color={'primary'} fontSize={'large'} />
-                <h3>Construção de API</h3>
-              </div>
-              <p>
-                Tenho experiência no desenvolvimento de APIs para aplicações
-                modernas com escalabilidade e integração eficiente.
-              </p>
-            </CardSkill>
-            <CardSkill>
-              <div>
-                <Diversity3OutlinedIcon color={'primary'} fontSize={'large'} />
-                <h3>Soft Skill</h3>
-              </div>
-              <p>
-                Valorizo a colaboração em equipe e a comunicação clara,
-                sempre buscando criar um ambiente positivo e produtivo.
-              </p>
-            </CardSkill>
-          </CardContent>
-        </CardContainer>
-        <SkillsContainer >
-          <ToolCardContents>
-            <h2>Minhas ferramentas:</h2>
-            <CardTools image={git} text="Git" />
-            <CardTools image={github} text="GitHub" />
-            <CardTools image={javascript} text="JavaScript" />
-            <CardTools image={react} text="React" />
-            <CardTools image={node} text="Node" />
-            <CardTools image={mongodb} text="MongoDB" />
-            <CardTools image={postgres} text="Postgres" />
-          </ToolCardContents>
-        </SkillsContainer>
-        <FooterContainer>
-          <h2>Vamos conversar?</h2>
-          <a href="">pabloofael@gmail.com</a>
-        </FooterContainer>
-      </HomeContainer>
-  )
+          <ButtonsContainer>
+            <HireButton>Download-CV</HireButton>
+            <ProjectButtonContainer>
+              <ProjectButton>Projetos</ProjectButton>
+              <ArrowOutwardIcon />
+            </ProjectButtonContainer>
+          </ButtonsContainer>
+        </ContentContainer>
+      </ProfileContainer>
+      <CardContainer>
+        <h2>Minhas Competências</h2>
+        <p>
+          Busco novas experiências e estou pronto para ajudar a criar projetos
+          incríveis. Posso criar layouts impressionantes para suas páginas.
+        </p>
+        <CardContent>
+          <CardSkill>
+            <div>
+              <ManageAccountsOutlinedIcon
+                color={'primary'}
+                fontSize={'large'}
+              />
+              <h3>Interface do usuário</h3>
+            </div>
+            <p>
+              Como desenvolvedor busco criar interfaces de usuário intuitivas e
+              visualmente atraentes, sempre priorizando a experiência do usuário
+              e a usabilidade.
+            </p>
+          </CardSkill>
+          <CardSkill>
+            <div>
+              <SettingsOutlinedIcon color={'primary'} fontSize={'large'} />
+              <h3>Construção de API</h3>
+            </div>
+            <p>
+              Tenho experiência no desenvolvimento de APIs para aplicações
+              modernas com escalabilidade e integração eficiente.
+            </p>
+          </CardSkill>
+          <CardSkill>
+            <div>
+              <Diversity3OutlinedIcon color={'primary'} fontSize={'large'} />
+              <h3>Soft Skill</h3>
+            </div>
+            <p>
+              Valorizo a colaboração em equipe e a comunicação clara, sempre
+              buscando criar um ambiente positivo e produtivo.
+            </p>
+          </CardSkill>
+        </CardContent>
+      </CardContainer>
+      <SkillsContainer>
+        <ToolCardContents>
+          <h2>Minhas ferramentas:</h2>
+          <CardTools image={git} text="Git" />
+          <CardTools image={github} text="GitHub" />
+          <CardTools image={javascript} text="JavaScript" />
+          <CardTools image={react} text="React" />
+          <CardTools image={node} text="Node" />
+          <CardTools image={mongodb} text="MongoDB" />
+          <CardTools image={postgres} text="Postgres" />
+        </ToolCardContents>
+      </SkillsContainer>
+      <FooterContainer>
+        <h2>Vamos conversar?</h2>
+        <a href="">pabloofael@gmail.com</a>
+      </FooterContainer>
+    </HomeContainer>
+  );
 }
-
