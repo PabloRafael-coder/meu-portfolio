@@ -21,7 +21,7 @@ const myProjects = [
     produtos de hardware. A aplicação foi desenvolvida com o objetivo de
     oferecer uma experiência de compra fluida e intuitiva, com recursos
     essenciais para o usuário final.`,
-    image: login,
+    image: todo,
   },
 ];
 
