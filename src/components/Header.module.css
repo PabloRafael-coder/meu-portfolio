@@ -6,6 +6,7 @@
     margin-inline: auto;
     --max-width: 375px;
     width: min(var(--max-width), 100% - 1.5rem * 2);
+    border-bottom: 1px solid var(--gray-100);
 }
 
 .logoHeader {
@@ -23,31 +24,41 @@
 }
 
 .headerNavList a {
+    font-family: 'Martian Mono', sans-serif;
     text-decoration: none;
-    color: var(--gray-300);
-    font-weight: 700;
+    color: var(--gray-900);
+    font-weight: 500;
+    font-size: 0.775rem;
+    padding: .2rem 1rem;
+    text-transform: uppercase;
 
     &.active {
-        color: var(--gray-700);
+        color: var(--gray-300);
+        border-bottom: 2px solid var(--green-300);
+        background: var(--gray-900);
+        border-radius: .25rem;
+        
     }
 }
 
 .headerButton {
     background: var(--gray-900);
-    color: var(--gray-100);
-    font-size: 0.875rem;
+    font-family: 'Martian Mono', sans-serif;
+    color: var(--gray-300);
+    font-weight: 500;
+    font-size: .875rem;
+    padding: .8rem .5rem;
+    text-transform: uppercase;
 
-    padding-inline: .5rem;
-    padding-block: 1rem;
+
 
     border: 0;
-    border-radius: 8px;
+    border-radius: 0 18px;
     cursor: pointer;
 }
 
 .headerButton:hover {
     color: var(--white);
-    background-color: var(--gray-700);
 }
 
 .desktopOnly {

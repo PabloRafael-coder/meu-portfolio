@@ -13,7 +13,8 @@ export const CardImage = styled.div`
   img {
     width: 100%;
     height: 100%;
-    border-radius: 1rem;
+    border-radius: 0 1rem;
+    object-fit: cover;
   }
 `;
 
@@ -24,6 +25,7 @@ export const CardContent = styled.div`
 
   p {
     max-width: 40rem;
+    line-height: 2;
   }
 `;
 
@@ -34,13 +36,22 @@ export const CardLink = styled.div`
 
   a {
     display: flex;
-    padding-inline: 1rem;
-    padding-block: 0.5rem;
-    border-radius: 8px;
-    background: black;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+
+    font-size: 0.875rem;
+    font-family: 'Martian Mono', sans-serif;
+
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    background: var(--gray-900);
+    color: var(--gray-300);
     text-decoration: none;
-    color: white;
 
     cursor: pointer;
+
+    &:hover {
+      color: var(--white);
+    }
   }
 `;

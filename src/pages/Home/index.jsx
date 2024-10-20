@@ -29,6 +29,7 @@ import {
   ProjectButton,
   ProjectButtonContainer,
   SkillsContainer,
+  TextCardContainer,
   ToolCardContents,
   UserProfile,
 } from './styles';
@@ -51,23 +52,25 @@ export function Home() {
           <ButtonsContainer>
             <HireButton>Download-CV</HireButton>
             <ProjectButtonContainer>
-              <ProjectButton>Projetos</ProjectButton>
-              <ArrowOutwardIcon />
+              <ProjectButton>
+                Projetos
+                <ArrowOutwardIcon />
+              </ProjectButton>
             </ProjectButtonContainer>
           </ButtonsContainer>
         </ContentContainer>
       </ProfileContainer>
       <CardContainer>
         <h2>Minhas Competências</h2>
-        <p>
+        <TextCardContainer>
           Busco novas experiências e estou pronto para ajudar a criar projetos
           incríveis. Posso criar layouts impressionantes para suas páginas.
-        </p>
+        </TextCardContainer>
         <CardContent>
           <CardSkill>
             <div>
               <ManageAccountsOutlinedIcon
-                color={'primary'}
+                color={'success'}
                 fontSize={'large'}
               />
               <h3>Interface do usuário</h3>
@@ -80,7 +83,7 @@ export function Home() {
           </CardSkill>
           <CardSkill>
             <div>
-              <SettingsOutlinedIcon color={'primary'} fontSize={'large'} />
+              <SettingsOutlinedIcon color={'success'} fontSize={'large'} />
               <h3>Construção de API</h3>
             </div>
             <p>
@@ -90,7 +93,7 @@ export function Home() {
           </CardSkill>
           <CardSkill>
             <div>
-              <Diversity3OutlinedIcon color={'primary'} fontSize={'large'} />
+              <Diversity3OutlinedIcon color={'success'} fontSize={'large'} />
               <h3>Soft Skill</h3>
             </div>
             <p>
@@ -101,8 +104,8 @@ export function Home() {
         </CardContent>
       </CardContainer>
       <SkillsContainer>
+        <h2>Minhas ferramentas</h2>
         <ToolCardContents>
-          <h2>Minhas ferramentas:</h2>
           <CardTools image={git} text="Git" />
           <CardTools image={github} text="GitHub" />
           <CardTools image={javascript} text="JavaScript" />
