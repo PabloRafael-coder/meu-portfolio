@@ -29,6 +29,12 @@ export function Project() {
   return (
     <ProjectContainer>
       <h1>Meus Projetos</h1>
+      <p>
+        Aqui você encontra uma coleção dos trabalhos que desenvolvi ao longo 
+        da minha jornada como desenvolvedor. Cada projeto reflete o meu 
+        crescimento, dedicação e paixão por criar soluções modernas e eficientes
+        .
+      </p>
       <ProjectContent>
         {myProjects.map((project) => {
           return <CardProject key={project.id} projectProps={project} />;

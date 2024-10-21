@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const HomeContainer = styled.main`
   display: flex;
@@ -33,8 +34,10 @@ export const UserProfile = styled.div`
 
   img {
     width: 200px;
-    border-radius: 10px;
-    box-shadow: 6px 5px 20px #00000080;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 0 -3rem;
   }
 
   p {
@@ -51,16 +54,30 @@ export const UserProfile = styled.div`
     background-color: var(--gray-900);
 
     color: var(--gray-300);
+
   }
+
+  @media (width >= 80rem) {
+      
+      img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      object-position: 0;
+      box-shadow: 6px 5px 20px #00000080;
+    }
+      }
 `;
 
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 2rem;
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
     line-height: 1;
     color: var(--gray-700);
   }
@@ -76,6 +93,7 @@ export const ContentContainer = styled.div`
 
     h1 {
       font-size: 3rem;
+      text-align: start;
     }
 
     p {
@@ -94,11 +112,14 @@ export const ButtonsContainer = styled.div`
   }
 `;
 
-export const HireButton = styled.button`
-  padding: 0.5rem;
+export const HireButton = styled.a`
+  display: flex;
+  align-items: center;
+  padding: .5rem;
   font-size: 0.875rem;
   font-family: 'Martian Mono', sans-serif;
   text-transform: uppercase;
+  text-decoration: none;
 
   border: 0;
   border-radius: 0.25rem;
@@ -114,29 +135,26 @@ export const HireButton = styled.button`
 
 export const ProjectButtonContainer = styled.div`
   display: flex;
-  align-items: center;
-  padding: 0 0.5rem;
-  border-radius: 0.25rem;
-
-  &:hover {
-    background-color: #2e7d32;
-    color: var(--white);
-  }
 `;
 
-export const ProjectButton = styled.button`
+export const ProjectButton = styled(NavLink)`
   display: flex;
   align-items: center;
   font-weight: 600;
   font-size: 0.875rem;
   font-family: 'Martian Mono', sans-serif;
   border: 0;
+  padding: 0.5rem;
+  border-radius: .25rem;
+  
   text-transform: uppercase;
-
+  text-decoration: none;
+  color: var(--gray-900);
   background: none;
   cursor: pointer;
 
   &:hover {
+    background-color: #2e7d32;
     color: var(--white);
   }
 `;

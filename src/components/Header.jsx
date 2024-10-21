@@ -1,20 +1,19 @@
 import { NavLink } from 'react-router-dom';
 
 import styles from './Header.module.css';
-import logo from '../assets/thunder.png';
 
 export function Header() {
   return (
     <header className={styles.header}>
-      <img className={styles.logoHeader} src={logo} alt="" />
+      <p>PabloRafael<span>-coder</span></p>
       <nav className={styles.headerNav}>
         <li className={styles.headerNavList}>
           <NavLink
             to="/"
             className={({ isActive }) =>
               isActive
-                ? `${styles.desktopOnly} ${styles.active}`
-                : `${styles.desktopOnly}`
+                ? `${styles.desktopOnly} ${styles.linkNav} ${styles.active}`
+                : `${styles.desktopOnly} ${styles.linkNav}`
             }
           >
             Home
@@ -23,27 +22,27 @@ export function Header() {
             to="/project"
             className={({ isActive }) =>
               isActive
-                ? `${styles.desktopOnly} ${styles.active}`
-                : `${styles.desktopOnly}`
+                ? `${styles.desktopOnly} ${styles.linkNav} ${styles.active}`
+                : `${styles.desktopOnly} ${styles.linkNav}`
             }
           >
             Projetos
           </NavLink>
           <NavLink
             to="https://github.com/PabloRafael-coder"
-            className={styles.desktopOnly}
+            className={`${styles.desktopOnly} ${styles.desktopOnly} ${styles.linkNav}`}
           >
             GitHub
           </NavLink>
           <NavLink
             to="https://www.linkedin.com/in/pablo-rafael-1372a2279/"
-            className={styles.desktopOnly}
+            className={`${styles.desktopOnly} ${styles.linkNav}`}
           >
             Linkedin
           </NavLink>
-          <button href="#" className={styles.headerButton}>
+          <NavLink to="/contact" className={styles.headerButton}>
             Entre em contato
-          </button>
+          </NavLink>
         </li>
       </nav>
     </header>

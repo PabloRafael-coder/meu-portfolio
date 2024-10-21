@@ -2,9 +2,15 @@ import styled from 'styled-components';
 
 export const CardContainer = styled.div`
   display: flex;
-  gap: 3rem;
+  flex-direction: column;
+  gap: 2rem;
   margin-block: 2rem;
   background-color: #ffffff;
+
+  @media (width >= 80rem) {
+    flex-direction: row;
+    gap: 3rem;
+  }
 `;
 
 export const CardImage = styled.div`
