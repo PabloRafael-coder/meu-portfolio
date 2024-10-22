@@ -1,7 +1,6 @@
 import { CardSkill } from '../../components/CardSkills';
 import { CardTools } from '../../components/CardTools';
 
-
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
 import Diversity3OutlinedIcon from '@mui/icons-material/Diversity3Outlined';
@@ -15,9 +14,8 @@ import mongodb from '../../assets/MongoDB.svg';
 import postgres from '../../assets/PostgreSQL-Dark.svg';
 import git from '../../assets/Git.svg';
 import github from '../../assets/Github-Dark.svg';
-import pdf from '../../../arquivo.pdf';
+import pdf from '../../../curriculo.pdf';
 import cs from '../../assets/cs.svg';
-
 
 import '../../global.css';
 
@@ -54,9 +52,9 @@ export function Home() {
             para projetos tanto no front-end quanto no back-end.
           </p>
           <ButtonsContainer>
-            <HireButton href={pdf} download="pdf">
+            <HireButton href={pdf} download="currículo de Pablo Rafael">
               Download-CV
-              </HireButton>
+            </HireButton>
             <ProjectButtonContainer>
               <ProjectButton to="/project">
                 Projetos
