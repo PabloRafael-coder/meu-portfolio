@@ -3,7 +3,6 @@ import todo from '../../assets/todo.svg';
 import { CardContainer, CardContent, CardImage, CardLink } from './styles';
 
 export function CardProject({ projectProps }) {
-  console.log(projectProps);
   return (
     <CardContainer>
       <CardImage>
