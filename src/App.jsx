@@ -1,11 +1,11 @@
-import { DefaultLayout } from "./Layouts/defaultLayout"
+import { DefaultLayout } from './Layouts/defaultLayout';
 
 function App() {
   return (
     <>
-      <DefaultLayout/>
+      <DefaultLayout />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
