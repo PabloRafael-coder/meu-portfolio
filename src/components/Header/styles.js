@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
-
   padding-block: 1rem;
   margin-inline: auto;
   --max-width: 375px;
@@ -30,11 +29,17 @@ export const HeaderContainer = styled.header`
 `;
 
 export const HeaderNavList = styled.ul`
-  display: flex;
+  display: ${(props) => (props.isOpen ? 'flex' : 'none')};
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: ${(props) => (props.isOpen ? '1rem' : '')};
+  left: ${(props) => (props.isOpen ? '1rem' : '')};
+  top: ${(props) => (props.isOpen ? '3.5rem' : '')};
+  position: ${(props) => (props.isOpen ? 'absolute' : '')};
   align-items: center;
   gap: 1.5rem;
   list-style-type: none;
-  display: none;
 
   @media (width >= 45rem) {
     display: block;
@@ -75,12 +80,45 @@ export const HeaderNavContact = styled(NavLink)`
   }
 `;
 
-export const MobileHeaderNavContainer = styled.button`
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
+export const MobileHeaderNavContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: max-content;
+    padding: 5rem;
+    background: linear-gradient(180deg, #1c1a1a, #d9d9d9cf);
+    gap: 1rem;
+
+    position: absolute;
+    top: 3.5rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &:hover {
+    background-color: var(--gray-300);
+  }
 
   @media (width >= 45rem) {
     display: none;
   }
+`;
+
+export const ButtonClose = styled.button`
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
 `;

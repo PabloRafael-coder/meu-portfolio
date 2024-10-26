@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   HeaderContainer,
   HeaderNavContact,
@@ -6,9 +7,11 @@ import {
   MobileHeaderNavContainer,
 } from './styles';
 
-import { Dehaze } from '@mui/icons-material';
+import { Close, Dehaze } from '@mui/icons-material';
 
 export function Header() {
+  const [isOpen, setIsOpen] = useState(true);
+
   return (
     <HeaderContainer>
       <p>
@@ -16,7 +19,7 @@ export function Header() {
         <span>-coder</span>
       </p>
       <nav>
-        <HeaderNavList>
+        <HeaderNavList isOpen={isOpen}>
           <HeaderNavLink to="/">Home</HeaderNavLink>
           <HeaderNavLink to="/project">Projetos</HeaderNavLink>
           <HeaderNavLink to="https://github.com/PabloRafael-coder">
@@ -27,9 +30,24 @@ export function Header() {
           </HeaderNavLink>
           <HeaderNavContact to="/contact">Entre em contato</HeaderNavContact>
         </HeaderNavList>
-        <MobileHeaderNavContainer>
-          <Dehaze />
-        </MobileHeaderNavContainer>
+        {isOpen ? (
+          <MobileHeaderNavContainer
+            onClick={() => {
+              setIsOpen(false);
+            }}
+          >
+            <Close fontSize={'medium'} />
+          </MobileHeaderNavContainer>
+        ) : (
+          <MobileHeaderNavContainer
+            isOpen={isOpen}
+            onClick={() => {
+              setIsOpen(true);
+            }}
+          >
+            <Dehaze />
+          </MobileHeaderNavContainer>
+        )}
       </nav>
     </HeaderContainer>
   );
