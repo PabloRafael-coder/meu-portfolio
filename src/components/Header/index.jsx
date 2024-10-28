@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   HeaderContainer,
   HeaderNavContact,
@@ -6,11 +6,25 @@ import {
   HeaderNavList,
   MobileHeaderNavContainer,
 } from './styles';
-
 import { Close, Dehaze } from '@mui/icons-material';
 
 export function Header() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleResize() {
+    if (window.innerWidth > 800) {
+      setIsOpen(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <HeaderContainer>
@@ -30,24 +44,13 @@ export function Header() {
           </HeaderNavLink>
           <HeaderNavContact to="/contact">Entre em contato</HeaderNavContact>
         </HeaderNavList>
-        {isOpen ? (
-          <MobileHeaderNavContainer
-            onClick={() => {
-              setIsOpen(false);
-            }}
-          >
-            <Close fontSize={'medium'} />
-          </MobileHeaderNavContainer>
-        ) : (
-          <MobileHeaderNavContainer
-            isOpen={isOpen}
-            onClick={() => {
-              setIsOpen(true);
-            }}
-          >
-            <Dehaze />
-          </MobileHeaderNavContainer>
-        )}
+        <MobileHeaderNavContainer
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
+          {isOpen ? <Close fontSize={'medium'} /> : <Dehaze />}
+        </MobileHeaderNavContainer>
       </nav>
     </HeaderContainer>
   );

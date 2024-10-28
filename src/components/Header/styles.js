@@ -40,20 +40,27 @@ export const HeaderNavList = styled.ul`
   align-items: center;
   gap: 1.5rem;
   list-style-type: none;
+  background: ${(props) =>
+    props.isOpen ? 'linear-gradient(179deg, black, #8d8d8d80);' : ''};
 
   @media (width >= 45rem) {
     display: block;
+    position: ${({ screenSize }) => (screenSize > 800 ? 'relative' : '')};
   }
 `;
 
 export const HeaderNavLink = styled(NavLink)`
   font-family: 'Martian Mono', sans-serif;
   text-decoration: none;
-  color: var(--gray-900);
+  color: var(--gray-100);
   font-weight: 500;
   font-size: 0.775rem;
   padding: 0.2rem 1rem;
   text-transform: uppercase;
+
+  @media (width >= 45rem) {
+    color: var(--gray-900);
+  }
 
   &.active {
     color: var(--gray-300);
