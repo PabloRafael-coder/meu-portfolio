@@ -26,6 +26,12 @@ export function Header() {
     };
   }, []);
 
+  function handleNavLinkClick() {
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  }
+
   return (
     <HeaderContainer>
       <p>
@@ -33,13 +39,19 @@ export function Header() {
         <span>-coder</span>
       </p>
       <nav>
-        <HeaderNavList isOpen={isOpen}>
+        <HeaderNavList $isOpen={isOpen} onClick={handleNavLinkClick}>
           <HeaderNavLink to="/">Home</HeaderNavLink>
           <HeaderNavLink to="/project">Projetos</HeaderNavLink>
-          <HeaderNavLink to="https://github.com/PabloRafael-coder">
+          <HeaderNavLink
+            target="_blank"
+            to="https://github.com/PabloRafael-coder"
+          >
             GitHub
           </HeaderNavLink>
-          <HeaderNavLink to="https://www.linkedin.com/in/pablo-rafael-1372a2279/">
+          <HeaderNavLink
+            target="_blank"
+            to="https://www.linkedin.com/in/pablo-rafael-1372a2279/"
+          >
             Linkedin
           </HeaderNavLink>
           <HeaderNavContact to="/contact">Entre em contato</HeaderNavContact>

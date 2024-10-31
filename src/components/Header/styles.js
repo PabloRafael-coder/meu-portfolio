@@ -29,19 +29,19 @@ export const HeaderContainer = styled.header`
 `;
 
 export const HeaderNavList = styled.ul`
-  display: ${(props) => (props.isOpen ? 'flex' : 'none')};
+  display: ${({ $isOpen }) => ($isOpen ? 'flex' : 'none')};
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  right: ${(props) => (props.isOpen ? '1rem' : '')};
-  left: ${(props) => (props.isOpen ? '1rem' : '')};
-  top: ${(props) => (props.isOpen ? '3.5rem' : '')};
-  position: ${(props) => (props.isOpen ? 'absolute' : '')};
+  right: ${({ $isOpen }) => ($isOpen ? '1rem' : '')};
+  left: ${({ $isOpen }) => ($isOpen ? '1rem' : '')};
+  top: ${({ $isOpen }) => ($isOpen ? '3.5rem' : '')};
+  position: ${({ $isOpen }) => ($isOpen ? 'absolute' : '')};
   align-items: center;
   gap: 1.5rem;
   list-style-type: none;
-  background: ${(props) =>
-    props.isOpen ? 'linear-gradient(179deg, black, #8d8d8d80);' : ''};
+  background: ${({ $isOpen }) =>
+    $isOpen ? 'linear-gradient(179deg, black, #8d8d8d80);' : ''};
 
   @media (width >= 45rem) {
     display: block;
