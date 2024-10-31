@@ -200,22 +200,21 @@ export const SkillsContainer = styled.div`
   padding-block: 4rem;
   gap: 2rem;
   margin-inline: auto;
-  max-width: 60rem;
+  width: min(375px, 100% - 1.5rem * 2);
+
+  @media (width >= 45rem) {
+    width: min(80rem, 100% - 1.5rem * 2);
+  }
 `;
 
 export const ToolCardContents = styled.div`
   display: flex;
-  width: min(375px, 100% - 1.5rem * 2);
   gap: 1rem;
   margin: auto;
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
   max-width: 40rem;
-
-  @media (width >= 80rem) {
-    width: min(80rem, 100% - 1.5rem * 2);
-  }
 `;
 
 export const FooterContainer = styled.footer`
