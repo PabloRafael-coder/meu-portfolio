@@ -33,7 +33,7 @@ export const HeaderNavList = styled.ul`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  right: ${({ $isOpen }) => ($isOpen ? '1rem' : '')};
+  right: ${({ $isOpen }) => ($isOpen ? '1.5rem' : '')};
   top: ${({ $isOpen }) => ($isOpen ? '3.5rem' : '')};
   position: ${({ $isOpen }) => ($isOpen ? 'absolute' : '')};
   align-items: center;
