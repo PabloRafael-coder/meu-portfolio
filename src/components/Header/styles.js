@@ -6,7 +6,7 @@ export const HeaderContainer = styled.header`
   align-items: center;
   padding-block: 1rem;
   margin-inline: auto;
-  --max-width: 375px;
+  --max-width: 80rem;
   width: min(var(--max-width), 100% - 1.5rem * 2);
   border-bottom: 1px solid var(--gray-100);
 
@@ -34,14 +34,16 @@ export const HeaderNavList = styled.ul`
   align-items: center;
   justify-content: center;
   right: ${({ $isOpen }) => ($isOpen ? '1rem' : '')};
-  left: ${({ $isOpen }) => ($isOpen ? '1rem' : '')};
   top: ${({ $isOpen }) => ($isOpen ? '3.5rem' : '')};
   position: ${({ $isOpen }) => ($isOpen ? 'absolute' : '')};
   align-items: center;
   gap: 1.5rem;
   list-style-type: none;
   background: ${({ $isOpen }) =>
-    $isOpen ? 'linear-gradient(179deg, black, #8d8d8d80);' : ''};
+    $isOpen ? 'linear-gradient(179deg, #939393, #8d8d8df7);' : ''};
+  padding: ${({ $isOpen }) => ($isOpen ? '5rem 3rem' : '0')};
+  border-radius: ${({ $isOpen }) => ($isOpen ? '0.5rem' : '0')};
+  border: ${({ $isOpen }) => ($isOpen ? 'solid 1px var(--gray-300)' : '0')};
 
   @media (width >= 45rem) {
     display: block;
