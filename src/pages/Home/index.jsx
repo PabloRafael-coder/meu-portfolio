@@ -122,7 +122,7 @@ export function Home() {
       </SkillsContainer>
       <FooterContainer>
         <h2>Vamos conversar?</h2>
-        <a href="">pabloofael@gmail.com</a>
+        <a href="">pablorafael.dev@gmail.com</a>
       </FooterContainer>
     </HomeContainer>
   );
