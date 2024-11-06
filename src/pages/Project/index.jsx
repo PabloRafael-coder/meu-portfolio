@@ -14,15 +14,6 @@ const myProjects = [
     além de oferecer uma visualização clara do progresso.`,
     image: todo,
   },
-  {
-    id: 2,
-    title: 'E-commerce de Vendas de Hardware',
-    text: `Este projeto é uma plataforma de e-commerce voltada para a venda de
-    produtos de hardware. A aplicação foi desenvolvida com o objetivo de
-    oferecer uma experiência de compra fluida e intuitiva, com recursos
-    essenciais para o usuário final.`,
-    image: todo,
-  },
 ];
 
 export function Project() {
@@ -30,8 +21,8 @@ export function Project() {
     <ProjectContainer>
       <h1>Meus Projetos</h1>
       <p>
-        Aqui você encontra uma coleção dos trabalhos que desenvolvi ao longo 
-        da minha jornada como desenvolvedor. Cada projeto reflete o meu 
+        Aqui você encontra uma coleção dos trabalhos que desenvolvi ao longo da
+        minha jornada como desenvolvedor. Cada projeto reflete o meu
         crescimento, dedicação e paixão por criar soluções modernas e eficientes
         .
       </p>
