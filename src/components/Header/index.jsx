@@ -1,34 +1,34 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 import {
   HeaderContainer,
   HeaderNavContact,
   HeaderNavLink,
   HeaderNavList,
   MobileHeaderNavContainer,
-} from './styles';
-import { Close, Dehaze } from '@mui/icons-material';
+} from './styles'
+import { Close, Dehaze } from '@mui/icons-material'
 
 export function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   function handleResize() {
     if (window.innerWidth > 800) {
-      setIsOpen(false);
+      setIsOpen(false)
     }
   }
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    handleResize();
+    window.addEventListener('resize', handleResize)
+    handleResize()
 
     return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   function handleNavLinkClick() {
     if (isOpen) {
-      setIsOpen(false);
+      setIsOpen(false)
     }
   }
 
@@ -58,12 +58,12 @@ export function Header() {
         </HeaderNavList>
         <MobileHeaderNavContainer
           onClick={() => {
-            setIsOpen(!isOpen);
+            setIsOpen(!isOpen)
           }}
         >
           {isOpen ? <Close fontSize={'medium'} /> : <Dehaze />}
         </MobileHeaderNavContainer>
       </nav>
     </HeaderContainer>
-  );
+  )
 }

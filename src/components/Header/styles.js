@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -26,7 +26,7 @@ export const HeaderContainer = styled.header`
   @media (width >= 45rem) {
     width: min(80rem, 100% - 1.5rem * 2);
   }
-`;
+`
 
 export const HeaderNavList = styled.ul`
   display: ${({ $isOpen }) => ($isOpen ? 'flex' : 'none')};
@@ -49,7 +49,7 @@ export const HeaderNavList = styled.ul`
     display: block;
     position: ${({ screenSize }) => (screenSize > 800 ? 'relative' : '')};
   }
-`;
+`
 
 export const HeaderNavLink = styled(NavLink)`
   font-family: 'Martian Mono', sans-serif;
@@ -70,7 +70,7 @@ export const HeaderNavLink = styled(NavLink)`
     background: var(--gray-900);
     border-radius: 0.25rem;
   }
-`;
+`
 export const HeaderNavContact = styled(NavLink)`
   font-family: 'Martian Mono', sans-serif;
   font-weight: 500;
@@ -87,7 +87,7 @@ export const HeaderNavContact = styled(NavLink)`
     color: var(--white);
     background-color: var(--gray-900);
   }
-`;
+`
 
 export const MobileHeaderNavContainer = styled.div`
   display: flex;
@@ -122,7 +122,7 @@ export const MobileHeaderNavContainer = styled.div`
   @media (width >= 45rem) {
     display: none;
   }
-`;
+`
 
 export const ButtonClose = styled.button`
   background-color: transparent;
@@ -130,4 +130,4 @@ export const ButtonClose = styled.button`
   position: absolute;
   right: 1rem;
   top: 1rem;
-`;
+`
