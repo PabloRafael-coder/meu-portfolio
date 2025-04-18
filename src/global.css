@@ -1,28 +1,9 @@
-:root {
-    --white: #fff;
-    --gray-100: #e1e1e6;
-    --gray-300: #c4c4cc;
-    --gray-400: #8d8d99;
-    --gray-600: #323238;
-    --gray-700: #29292e;
-    --gray-800: #202024;
-    --gray-900: #121214;
-    --black: #000;
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import "tailwindcss";
 
-    --green-300: #00b37e;
-    --green-500: #00875f;
 
-    --red-500: #f75a68;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    -webkit-font-smoothing: antialiased;
-    font-size: 1rem;
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-geist: "Geist", sans-serif;
 }
